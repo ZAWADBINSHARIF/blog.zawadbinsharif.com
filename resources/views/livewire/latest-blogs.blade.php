@@ -15,7 +15,7 @@
     </div>
 
     <div class="py-10 text-center">
-        <button class="btn btn-accent btn-wide">More blogs</button>
+        <button class="btn btn-outline btn-primary btn-wide">More blogs</button>
     </div>
 
 </div>

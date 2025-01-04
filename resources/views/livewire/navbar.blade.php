@@ -9,7 +9,7 @@
             </div>
             <ul tabindex="0" class="menu menu-sm dropdown-content bg-base-100 rounded-box z-[1] mt-3 w-52 p-2 shadow">
                 <li><a wire:navigate href="/"
-                        class="{{ $currentUri == '/' ? 'btn-active font-bold btn-primary' : null }}">Home</a></li>
+                        class="{{ $currentUri == '/' ? 'btn-active font-bold btn-accent' : null }}">Home</a></li>
                 <li><a wire:navigate href="/blogs"
                         class="{{ $currentUri == 'blogs' ? 'btn-active font-bold btn-accent' : null }}">Blogs</a></li>
             </ul>
@@ -25,11 +25,11 @@
         </a>
     </div>
     <div class="navbar-center hidden lg:flex">
-        <ul class="menu menu-horizontal px-1">
+        <ul class="menu menu-horizontal px-1 space-x-3">
             <li><a wire:navigate href="/"
-                    class="{{ $currentUri == '/' ? 'btn-active font-bold btn-primary' : null }}">Home</a></li>
+                    class="{{ $currentUri == '/' ? 'btn-active font-bold btn-accent' : "outline-1 outline-gray-400 outline" }}">Home</a></li>
             <li><a wire:navigate href="/blogs"
-                    class="{{ $currentUri == 'blogs' ? 'btn-active font-bold btn-accent' : null }}">Blogs</a></li>
+                    class="{{ $currentUri == 'blogs' ? 'btn-active font-bold btn-accent' : "outline-1 outline-gray-400 outline" }}">Blogs</a></li>
         </ul>
     </div>
 

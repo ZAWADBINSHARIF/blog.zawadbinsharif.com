@@ -7,9 +7,9 @@
         <h2 class="card-title">Shoes!</h2>
         <p>If a dog chews shoes whose shoes does he choose? Lorem ipsum dolor, sit amet consectetur adipisicing elit.
             Explicabo, dolore.</p>
-        <p class="badge badge-outline">Typescript</p>
+        <p class="badge badge-outline badge-primary">Typescript</p>
         <div class="card-actions justify-end">
-            <button class="btn btn-outline btn-primary">Read more</button>
+            <a wire:navigate href="/blogs/1" class="btn btn-accent">Read more</a>
         </div>
     </div>
 </div>

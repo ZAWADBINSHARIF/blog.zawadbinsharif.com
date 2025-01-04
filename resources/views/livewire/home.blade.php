@@ -5,4 +5,3 @@
     <livewire:latest-blogs />
 
 </div>
-</div>

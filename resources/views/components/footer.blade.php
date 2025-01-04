@@ -1,4 +1,4 @@
-<footer class="footer bg-success text-black items-center rounded-t-xl p-4">
+<footer class="footer bg-accent text-black items-center rounded-t-xl p-4">
     <aside class="grid-flow-col items-center">
         <svg width="36" height="36" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill-rule="evenodd"
             clip-rule="evenodd" class="fill-current">
