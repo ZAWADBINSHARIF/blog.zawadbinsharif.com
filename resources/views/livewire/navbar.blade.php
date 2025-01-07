@@ -14,7 +14,7 @@
                         class="{{ $currentUri == 'blogs' ? 'btn-active font-bold btn-accent' : null }}">Blogs</a></li>
             </ul>
         </div>
-        <a href="/" class="btn btn-ghost text-lg font-blog uppercase justify-center max-[430px]:px-0 max-[430px]:items-end max-[430px]:leading-3">
+        <a href="/" wire:navigate class="btn btn-ghost text-lg font-blog uppercase justify-center max-[430px]:px-0 max-[430px]:items-end max-[430px]:leading-3">
             <div class="flex justify-center items-end max-[430px]:flex-col">
                 <p class="text-primary text-3xl">Blog</p>
                 <div class="flex space-x-1 max-[430px]:flex-row text-xs">
@@ -34,8 +34,8 @@
     </div>
 
     <div class="navbar-end flex gap-3">
-        <a class="btn btn-accent">Login</a>
-        <a class="btn btn-success">Register</a>
+        <a class="btn btn-accent" wire:navigate href="/login">Login</a>
+        <a class="btn btn-success" wire:navigate href="/registration">Register</a>
     </div>
 
 </div>
