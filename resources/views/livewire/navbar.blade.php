@@ -1,3 +1,14 @@
+@php
+
+if(auth()->user()){
+$username = auth()->user()->name;
+$nameWords = explode(" ", $username);
+$username = $nameWords[0];
+}
+
+@endphp
+
+
 <div class="navbar bg-base-100 rounded-b-xl mb-5">
     <div class="navbar-start">
         <div class="dropdown">
@@ -14,7 +25,8 @@
                         class="{{ $currentUri == 'blogs' ? 'btn-active font-bold btn-accent' : null }}">Blogs</a></li>
             </ul>
         </div>
-        <a href="/" wire:navigate class="btn btn-ghost text-lg font-blog uppercase justify-center max-[430px]:px-0 max-[430px]:items-end max-[430px]:leading-3">
+        <a href="/" wire:navigate
+            class="btn btn-ghost text-lg font-blog uppercase justify-center max-[430px]:px-0 max-[430px]:items-end max-[430px]:leading-3">
             <div class="flex justify-center items-end max-[430px]:flex-col">
                 <p class="text-primary text-3xl">Blog</p>
                 <div class="flex space-x-1 max-[430px]:flex-row text-xs">
@@ -26,16 +38,29 @@
     </div>
     <div class="navbar-center hidden lg:flex">
         <ul class="menu menu-horizontal px-1 space-x-3">
-            <li><a wire:navigate href="/"
-                    class="{{ $currentUri == '/' ? 'btn-active font-bold btn-accent' : "outline-1 outline-gray-400 outline" }}">Home</a></li>
-            <li><a wire:navigate href="/blogs"
-                    class="{{ $currentUri == 'blogs' ? 'btn-active font-bold btn-accent' : "outline-1 outline-gray-400 outline" }}">Blogs</a></li>
+            <li><a wire:navigate href="/" class="{{ $currentUri == '/' ? 'btn-active font-bold btn-accent' : " outline-1
+                    outline-gray-400 outline" }}">Home</a></li>
+            <li><a wire:navigate href="/blogs" class="{{ $currentUri == 'blogs' ? 'btn-active font-bold btn-accent' : "
+                    outline-1 outline-gray-400 outline" }}">Blogs</a></li>
         </ul>
     </div>
 
     <div class="navbar-end flex gap-3">
+
+        @auth
+
+        <div class="avatar placeholder">
+            <a wire:navigate href="/dashboard" class="text-center font-bold bg-success text-white p-1 px-2 rounded">
+                {{$username}}
+            </a>
+        </div>
+        <a wire:navigate href="/logout" class="btn">Logout</a>
+
+        @else
         <a class="btn btn-accent" wire:navigate href="/login">Login</a>
         <a class="btn btn-success" wire:navigate href="/registration">Register</a>
+        @endauth
+
     </div>
 
 </div>
