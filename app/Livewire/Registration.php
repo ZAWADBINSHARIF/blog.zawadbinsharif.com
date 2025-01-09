@@ -46,12 +46,14 @@ class Registration extends Component
 
         // $validation['password'] = bcrypt($validation['password']);
         $validation['password'] = Hash::make($validation['password'], [
-            'rounds'=> 12
+            'rounds' => 12
         ]);
 
         $user = User::create($validation);
 
         Auth::login($user);
+
+        return redirect()->to('/');
     }
 
     public function render()
