@@ -1,6 +1,6 @@
 <div class="flex justify-center p-4 h-screen">
-    <form class="w-full md:w-1/2 space-y-5 h-min p-5 border-2 border-success rounded-xl shadow-xl" wire:submit='submit'
-        method="POST">
+    <form class="w-full md:w-1/2 space-y-5 h-min p-5 border-2 border-success rounded-xl shadow-xl"
+        wire:submit.prevent='submit' method="POST">
         @csrf
         <div>
             <label class="input input-bordered flex items-center gap-2 input-success">

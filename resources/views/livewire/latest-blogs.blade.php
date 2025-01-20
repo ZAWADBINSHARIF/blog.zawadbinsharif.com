@@ -8,9 +8,12 @@
 
     <div class="flex flex-wrap gap-8 justify-center">
 
-        @for ($i = 0; $i < 10; $i++)
-            <livewire:blog-item />
-        @endfor
+        @if ($posts)
+        @foreach ($posts as $post)
+        <livewire:blog-item :post="$post" />
+        @endforeach
+        @endif
+
 
     </div>
 

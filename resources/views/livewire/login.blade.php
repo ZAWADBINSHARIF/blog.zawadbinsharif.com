@@ -1,6 +1,6 @@
 <div class="flex justify-center p-4 h-screen">
-    <form class="w-full md:w-1/2 space-y-5 h-min p-5 border-2 border-accent rounded-xl shadow-xl" wire:submit='submit'
-        method="">
+    <form class="w-full md:w-1/2 space-y-5 h-min p-5 border-2 border-accent rounded-xl shadow-xl"
+        wire:submit.prevent='submit' method="">
         @csrf
         <label class="input input-bordered flex items-center gap-2 input-accent">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16" fill="currentColor" class="h-4 w-4 opacity-70">
